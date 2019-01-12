@@ -1163,7 +1163,7 @@ function Fights_for_player($player = null)
  * This function scrapes the JudoInside.com profile page for a player and returns their results.
  *
  * @access public
- * @param mixed $name.   (default: null)
+ * @param  mixed $name. (default: null)
  * @return void
  */
 function Player_profile($name = null)
