@@ -7,7 +7,7 @@ function Create_database()
 {
 	echo "<html><body>";
 	$db = 'data/rwjl.db';
-	$dbo = new SQLiteDatabase("$db");
+	$dbo = new SQLite3("$db");
 
 	$dbo->query("
         CREATE TABLE players(id INTEGER PRIMARY KEY, name CHAR(255), rank INTEGER, category CHAR(4), country CHAR(255), wins INTEGER, losses INTEGER);
@@ -50,7 +50,7 @@ function Db_create($name=null, $rank = null, $category = null, $country = null, 
 		//echo "<html><body>";
 		//echo $name;
 		$db = 'data/rwjl.db';
-		$dbo = new SQLiteDatabase("$db");
+		$dbo = new SQLite3("$db");
 
 		$dbo->query("
         INSERT INTO players (name, rank, category, country, wins, losses) VALUES ('$name', '1500','$category', '$country', '$wins', '$losses');
@@ -77,7 +77,7 @@ function Db_read()
 function Db_update($name=null, $rank = null, $category = null, $country = null, $wins = null, $losses = null)
 {
 	$db = 'data/rwjl.db';
-	$dbo = new SQLiteDatabase("$db");
+	$dbo = new SQLite3("$db");
 
 	//echo "rank='$rank', category='$category', country = '$country', wins = '$wins', losses = '$losses'";
 
@@ -107,7 +107,7 @@ function Db_delete($name = null)
 	//echo "<html><body>";
 	//echo $name;
 	$db = 'data/rwjl.db';
-	$dbo = new SQLiteDatabase("$db");
+	$dbo = new SQLite3("$db");
 
 	$dbo->query("
         DELETE FROM players WHERE name='$name';
@@ -130,7 +130,7 @@ function Find_name($name = null)
 	// Function returns 1 if name found, "Not Found" if not
 
 	$db = 'data/rwjl.db';
-	$dbo = new SQLiteDatabase("$db");
+	$dbo = new SQLite3("$db");
 
 	$result = $dbo->query("
         SELECT * FROM players WHERE name='$name';
@@ -184,7 +184,7 @@ function test_insert()
 {
 	echo "<html><body>";
 	$db = 'data/rwjl.db';
-	$dbo = new SQLiteDatabase("$db");
+	$dbo = new SQLite3("$db");
 
 	$dbo->query("
         INSERT INTO players (name, rank, category) VALUES ('BLOGGS Test', '1500', '-90' );
@@ -606,7 +606,7 @@ function Add_fight($player1, $player2, $p1_score, $p2_score, $p1_rank_pre, $p1_r
 	flush();
 	ob_flush();
 	$db = 'data/rwjl.db';
-	$dbo = new SQLiteDatabase("$db");
+	$dbo = new SQLite3("$db");
 
 	
 	$dbo->query("
@@ -754,7 +754,7 @@ function Add_event($name=null, $event_date=null, $shortcut=null)
 		
 		
 		$db = 'data/rwjl.db';
-		$dbo = new SQLiteDatabase("$db");
+		$dbo = new SQLite3("$db");
 
 		$dbo->query("
         INSERT INTO events (name, event_date, shortcut) VALUES ('$name', '$event_date', '$shortcut');

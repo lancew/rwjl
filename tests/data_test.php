@@ -1,6 +1,6 @@
 <?php
-require_once('simpletest/unit_tester.php');
-require_once('simpletest/reporter.php');
+require_once('vendor/simpletest/simpletest/unit_tester.php');
+require_once('vendor/simpletest/simpletest/reporter.php');
 require_once('lib/data.php');
 
 class TestOfDataModel extends UnitTestCase {
@@ -51,7 +51,7 @@ class TestOfDataModel extends UnitTestCase {
         $result = Fix_playernames("a1a234567890");
         $this->assertEqual($result,'aa', 'Fix_playername digits');
         
-        $result = Fix_playernames('a€a');
+        $result = Fix_playernames('aï¿½a');
         $this->assertEqual($result,'aa', 'Fix_playername accents');
         
         $result = Fix_playernames('a,a');
@@ -63,8 +63,8 @@ class TestOfDataModel extends UnitTestCase {
         $result = Fix_playernames('CHOI Woosu');
         $this->assertEqual($result,'CHOI Sean', 'Fix_playername CHOI Sean');
         
-        $result = Fix_playernames('ASKEL…F Sanna');
-        $this->assertEqual($result,'ASKELF Sanna', 'Fix_playername ASKEL…F Sanna');
+        $result = Fix_playernames('ASKELï¿½F Sanna');
+        $this->assertEqual($result,'ASKELF Sanna', 'Fix_playername ASKELï¿½F Sanna');
         
 
     }
@@ -92,6 +92,6 @@ class TestOfDataModel extends UnitTestCase {
     
 }
 
-$test = &new TestOfDataModel();
+$test = new TestOfDataModel();
 $test->run(new HtmlReporter());
 ?>
