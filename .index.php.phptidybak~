@@ -8,16 +8,17 @@
  * PHP version 5.3.1
  *
  * @category RWJL
+ * @package  RWJL
+ * @author   Lance Wicks <lw@judocoach.com>
  * @license  All rights reserved.
  * @link     http://www.rwjl.net
- * @author   Lance Wicks <lw@judocoach.com>
- * @package  RWJL
  */
+ 
 
 
 //require_once('lib/smartcache/smart_cache.php');
 require_once 'lib/limonade.php';
-require_once 'lib/mc-elo-calculator.php';
+require_once 'lib/mc-elo-calculator.php'; 
 //$GLOBALS['smart_cache']['ttl']=30000;
 //ini_set('memory_limit', '-1');
 

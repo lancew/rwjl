@@ -178,7 +178,7 @@
 
   <div id="footer" class="dimensions">
   &copy; 2010, 2011 Lance Wicks - all rights reserved - RWJL V.1.0
-   - <a href='/bugs/'>Bugs</a> - <a href="/test.html">Tests</a> - <a href="/codesniff.txt">Code Smell</a> - <a href='/api/'>API</a> -
+   -  - <a href="/test.html">Tests</a> - <a href="/codesniff.txt">Code Smell</a> - <a href='/api/'>API</a> -
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   you're not allowed to use this template free of charge if you remove or modify the following line(s)... see licence(.txt)
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->

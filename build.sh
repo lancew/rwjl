@@ -7,7 +7,5 @@ sleep 10
 echo "Running tests..."
 php tests/all_tests.php > test.html
 echo "Exporting bugs..."
-git sd publish --to ./bugs --html
-echo "Running codeSniffer"
-phpcs --ignore=./Old,./bugs ./ > codesniff.txt
+./vendor/squizlabs/php_codesniffer/bin/phpcs ./ > codesniff.txt
 echo "Finished"
