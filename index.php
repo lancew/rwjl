@@ -54,7 +54,6 @@ dispatch('/player/:name', 'Player_profile');
 dispatch('/maintenance/:mode', 'Maintenance_mode');
 
 dispatch('/oju_2011_import', 'Import_Oju_2011');
-dispatch('/phpinfo', 'php_info');
 
 dispatch('/api/', 'API_page');
 dispatch('/api/export_fights/:start/:finish', 'Export_fights');

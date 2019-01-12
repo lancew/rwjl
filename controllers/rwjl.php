@@ -14,7 +14,7 @@
  */
 
 /**
- * home_page function.
+ * Home_page function.
  *
  * This function simply returns the home page template.
  *
@@ -26,13 +26,14 @@ function Home_page()
     return html('home_page.html.php');
 }
 
-function php_info()
-{
-
-    $phpinfo = phpinfo();
-    echo $phpinfop;
-}
-
+/**
+ * Get_file function.
+ *
+ * This function gets a file for processing.
+ *
+ * @access public
+ * @return void
+ */
 function Get_file($event_region = null,
     $event_type = null,
     $event_name = null,
@@ -181,7 +182,7 @@ function Get_file($event_region = null,
 
 
 /**
- * import_html function.
+ * Import_html function.
  *
  * This function imports the results from the temp.txt file
  *
@@ -247,12 +248,14 @@ function Import_html()
 
 
 /**
- * process_row function.
+ * Process_row function.
  *
  * This function processes each row of raw data fed to it by import_html and updates the database with results of each fight.
  *
+ * @param mixed $raw_data
+ * @param mixed $event_data
+ * 
  * @access public
- * @param  mixed $row
  * @return void
  */
 function Process_row($raw_data, $event_data)
@@ -260,7 +263,7 @@ function Process_row($raw_data, $event_data)
 
     
     /***
- * get each column by tag name 
+ * Get each column by tag name 
 ***/
 
     //$cols = $row->getElementsByTagName('td');
@@ -282,15 +285,20 @@ function Process_row($raw_data, $event_data)
     //determine what round we are in for the Add_fight function later
     $round='';
 
-    if(strpos($raw_data, "Preliminary round")) { $round = "Preliminary round";
+    if (strpos($raw_data, "Preliminary round")) {
+        $round = "Preliminary round";
     }
-    if(strpos($raw_data, "Semifinal")) { $round = "Semifinal";
+    if (strpos($raw_data, "Semifinal")) {
+        $round = "Semifinal";
     }
-    if(strpos($raw_data, "Final")) { $round = "Final";
+    if (strpos($raw_data, "Final")) { 
+        $round = "Final";
     }
-    if(strpos($raw_data, "Fight for 3rd place")) { $round = "Fight for 3rd place";
+    if (strpos($raw_data, "Fight for 3rd place")) { 
+        $round = "Fight for 3rd place";
     }
-    if(strpos($raw_data, "Repechage")) { $round = "Repechage";
+    if (strpos($raw_data, "Repechage")) { 
+        $round = "Repechage";
     }
 
     // Now determine the name from the row received
@@ -472,7 +480,7 @@ function Process_row($raw_data, $event_data)
 
 
 /**
- * get_all function.
+ * Get_all function.
  *
  * This function pulls all the event data into the database using get_file() and import_html() and process_row()
  *
@@ -597,7 +605,7 @@ function Get_all()
     foreach ($events as $event) {
         
         //check for the OJU 2011 champs, if so process differently, else standard.
-        if($event =='oju/continental/2011_papeete') {
+        if ($event =='oju/continental/2011_papeete') {
             Import_Oju_2011();
         } else {
         
@@ -641,7 +649,7 @@ function Get_all()
 
 
 /**
- * show_categories function.
+ * Show_categories function.
  *
  * This function returns a list of categories web page
  *
@@ -655,12 +663,13 @@ function Show_categories()
 
 
 /**
- * show_category function.
+ * Show_category function.
  *
  * This function displays the category given to it via URL parameter.
  *
+ * @param mixed $category (default: null)
+ * 
  * @access public
- * @param  mixed $category. (default: null)
  * @return void
  */
 function Show_category($category = null)
@@ -747,12 +756,13 @@ function Show_category($category = null)
 
 
 /**
- * show_country function.
+ * Show_country function.
  *
  * This function displays a country's players
  *
+ * @param mixed $country (default: null)
+ *
  * @access public
- * @param  mixed $country. (default: null)
  * @return void
  */
 function Show_country($country = null)
@@ -857,7 +867,7 @@ function Show_country($country = null)
 
 
 /**
- * full_list function.
+ * Full_list function.
  *
  * This function creates a html list of all athletes
  *
@@ -929,7 +939,7 @@ function Full_list()
 }
 
 /**
- * show_all_countries function.
+ * Show_all_countries function.
  *
  * This function displays a list of all the countries
  *
@@ -1152,8 +1162,7 @@ function Fights_for_player($player = null)
  * This function scrapes the JudoInside.com profile page for a player and returns their results.
  *
  * @access public
- * @param  mixed $surname.   (default: null)
- * @param  mixed $firstname. (default: null)
+ * @param mixed $name.   (default: null)
  * @return void
  */
 function Player_profile($name = null)
@@ -1793,7 +1802,7 @@ function Last_fight_number($event = null)
     // This function is fed a event .DB file and returns the highest contest number
     // Used to identify where events start and finish.
 
-    if(!$event) {
+    if (!$event) {
         $db = dirname(__FILE__).'/../data/rwjl.db';    
     } else {
         $db = $event;
@@ -1933,9 +1942,9 @@ function Export_fights($start='12488',$finish='12806')
         echo '","';
         
         // Winner.
-        if($row['p1_score'] > $row['p2_score']) {
+        if ($row['p1_score'] > $row['p2_score']) {
             echo '"1"';
-        }else{
+        } else {
             echo '"2"';
         
         }
@@ -2037,10 +2046,10 @@ function Export_Fights_ji($start='12488',$finish='12806')
         // Event category
         $cat = $row['category'];
         $cat = ltrim($cat, '-');
-        if($cat == '+100') {
+        if ($cat == '+100') {
             $cat = '101';
         }
-        if($cat == '+78') {
+        if ($cat == '+78') {
             $cat = '79';
         }        
         echo $cat;
@@ -2079,9 +2088,9 @@ function Export_Fights_ji($start='12488',$finish='12806')
         
         
         // Winner.
-        if($row['p1_score'] > $row['p2_score']) {
+        if ($row['p1_score'] > $row['p2_score']) {
             echo '1';
-        }else{
+        } else {
             echo '2';
         
         }
@@ -2131,7 +2140,8 @@ function List_all_events()
 
 function Get_event_date()
 {
-    //Take the shortcut and determine the url, then pull the right page and grab the date.
+    //Take the shortcut and determine the url, then pull the 
+    //right page and grab the date.
     // shortcut comes from GET_ALL
 
     
