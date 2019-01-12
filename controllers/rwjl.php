@@ -803,7 +803,7 @@ function Show_country($country = null)
     
     // connect to the DB
     $db = 'data/rwjl.db';
-    $dbo = new SQLiteDatabase("$db");
+    $dbo = new SQLite3("$db");
 
     // run the query
     $query = "SELECT * FROM players
@@ -817,9 +817,9 @@ function Show_country($country = null)
     $html .= '<thead><tr><th class="table-sortable:numeric">Position</th><th class="table-sortable:alphanumeric">Name</th><th class="table-sortable:numeric">Rank</th><th class="table-sortable:alphanumeric">Category</th><th class="table-sortable:alphanumeric">Country</th><th style="padding-left:10px;" class="table-sortable:numeric" align="center">Wins</th><th class="table-sortable:numeric">Losses</th><th class="table-sortable:numeric">Total Fights</th><th class="table-sortable:numeric">Win rate</th></tr></thead>';
 
     // Loop through the results of the query and process each row
-    while ($result->valid()) {
+    while ($row = $result->fetchArray()) {
         // fetch current row
-        $row = $result->current();
+        //$row = $result->current();
         $html .= '<tr>';
         $html .= '<td>';
         $html .= $count;
@@ -853,7 +853,7 @@ function Show_country($country = null)
         //incement theplayer counter
         $count++;
         // get the next result
-        $result->next();
+        //$result->next();
     }
     $html .= '</table>';
     
@@ -1346,7 +1346,7 @@ function Get_Country_Participation_chart($country = 'Brazil')
         "
         );
 
-        $row = $result->current();
+        $row = $result->fetchArray();
         //echo $db_name.': ';
         //echo $row[0].'<br>';
         if ($row[0]) {
@@ -1392,7 +1392,7 @@ function Get_Country_Participation_Per_Event_chart($country = 'Brazil')
     $prior = 0;
     foreach ($dirnames as $db_name) {
         $db = 'data/'.$db_name;
-        $dbo = new SQLiteDatabase("$db");
+        $dbo = new SQLite3("$db");
 
         $result = $dbo->query(
             "
@@ -1400,7 +1400,7 @@ function Get_Country_Participation_Per_Event_chart($country = 'Brazil')
         "
         );
 
-        $row = $result->current();
+        $row = $result->fetchArray();
         //echo $db_name.': ';
         //echo $row[0].'<br>';
         if ($row[0]) {
