@@ -40,10 +40,6 @@
 <meta name="DC.format" content="19589 bytes" /> 
 <meta name="DC.identifier" scheme="DCTERMS.URI" content="http://rwjl.net/" /> 
 
-
-
-
-
 </head>
 
 <body>
@@ -67,19 +63,8 @@
 <div id="mainSite" class="dimensions">
   <div id="mainLeft">
    <div id="Content">
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-     <?= $content; ?>
+      
+     <?php echo $content; ?>
      
    </div>
   </div>
@@ -89,86 +74,86 @@
   
   <ul>
     
-                <li><a href="http://217.79.182.227/www.judo-world.net/ijf/grand_prix/2010_tunis/" target="_blank">'Grand_prix, 2010 Tunis',</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/aju/world_cup/2010_cairo/" target="_blank">'World cup, 2010 Cairo',</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/ijf/grand_slam/2010_rio/" target="_blank">'Grand slam, 2010 Rio',</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/pjc/world_cup/2010_sao_paulo/" target="_blank">'World cup, 2010 Sao Paulo',</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/eju/world_cup/2010_bucharest/" target="_blank">'World cup, 2010 Bucharest',</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/eju/world_cup/2010_madrid/" target="_blank">'World cup, 2010 Madrid',</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/eju/world_cup/2010_tallinn/" target="_blank">'World cup, 2010 Tallinn',</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/eju/world_cup/2010_lisbon/" target="_blank">'World cup, 2010 Lisbon',</a></li>
-                <li><a href="http://www.judo-world.net/pjc/world_cup/2010_isla_margarita/" target="_blank">'World cup, 2010 Isla Margarita',</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/pjc/world_cup/2010_san_salvador/" target="_blank">'World cup, 2010 San Salvador',</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/ijf/grand_slam/2010_moscow/" target="_blank">'Grand slam, 2010 Moscow',</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/jua/world_cup/2010_ulaanbaatar/" target="_blank">'World Cup, 2010 Mongolia'</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/oju/continental/2010_sen_canberra/" target="_blank">'OJU Champs, 2010 Canberra'</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/pjc/world_cup/2010_miami/" target="_blank">'World Cup, 2010 Miami'</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/ijf/world/wc2010/" target="_blank">'World Champs, 2010 Tokyo'</a></li>  
-                <li><a href="http://217.79.182.227/www.judo-world.net/jua/world_cup/2010_almaty/" target="_blank">'World Cup Men, 2010 Almaty'</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/jua/world_cup/2010_tashkent/" target="_blank">'World Cup Women, 2010 Tashkent'</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/eju/world_cup/2010_birmingham/" target="_blank">World Cup Women, 2010 GB</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/eju/world_cup/2010_rome/" target="_blank">World Cup Men, 2010 Rome</a></li>
-                 <li><a href="http://217.79.182.227/www.judo-world.net/eju/world_cup/2010_baku/" target="_blank">World Cup Women, 2010 Baku</a></li>
-                 <li><a href="http://217.79.182.227/www.judo-world.net/eju/world_cup/2010_minsk/" target="_blank">World Cup Men, 2010 Minsk</a></li>
-                 <li><a href="http://217.79.182.227/www.judo-world.net/ijf/grand_prix/2010_rotterdam/" target="_blank">Grand Prix, 2010 Rotterdam</a></li>
-                 <li><a href="http://217.79.182.227/www.judo-world.net/oju/world_cup/wcup_samoa2010/" target="_blank">World Cup, 2010 Samoa</a></li>
-                 <li><a href="http://217.79.182.227/www.judo-world.net/ijf/grand_prix/2010_abu_dhabi/" target="_blank">Grand Prix, 2010 Abu Dhabi</a></li>
-                 <li><a href="http://217.79.182.227/www.judo-world.net/jua/world_cup/2010_suwon/" target="_blank">World Cup, 2010 Suwon</a></li>
-                 <li><a href="http://217.79.182.227/www.judo-world.net/ijf/grand_slam/2010_tokyo/" target="_blank">Grand Slam, 2010 Tokyo</a></li>
-                 <li><a href="http://217.79.182.227/www.judo-world.net/ijf/grand_prix/2010_qingdao/" target="_blank">Grand Prix, 2010 Qingdao</a></li>
-                 <li><a href="http://217.79.182.227/www.judo-world.net/ijf/masters/2011_baku/" target="_blank">World Masters, 2011 Baku</a></li>
-                 <li><a href="http://www.judo-world.net/eju/world_cup/2011_sofia/" target="_blank">World Cup Women, 2011 Sofia</a></li>
-                 <li><a href="http://217.79.182.227/www.judo-world.net/eju/world_cup/2011_tblisi/" target="_blank">World Cup Men, 2011 Tblisi</a></li>
-                 <li><a href="http://217.79.182.227/www.judo-world.net/ijf/grand_slam/2011_paris" target="_blank">Grand Slam, 2011 Paris</a></li>
-                 <li><a href="http://217.79.182.227/www.judo-world.net/eju/world_cup/2011_budapest/" target="_blank">World Cup Men, 2011 Budapest</a></li>
-                 <li><a href="http://217.79.182.227/www.judo-world.net/eju/world_cup/2011_oberwart/" target="_blank">World Cup Women, 2011 Oberwart</a></li>
-                 <li><a href="http://www.judo-world.net/ijf/grand_prix/2011_duesseldorf/" target="_blank">Grand Prix, 2011 Dusseldorf</a></li>
-                 <li><a href="http://www.judo-world.net/eju/world_cup/2011_prague/" target="_blank">World Cup Women, 2011 Prague</a></li>
-                 <li><a href="http://217.79.182.227/www.judo-world.net/eju/world_cup/2011_warsaw/" target="_blank">World Cup Men, 2011 Warsaw</a></li>
-                 <li><a href="http://217.79.182.227/www.judo-world.net/pjc/continental/2011_guadalajara/" target="_blank">PJC Continental 2011</a></li>
-                 <li><a href="http://217.79.182.227/www.judo-world.net/jua/continental/2011_abu_dhabi/" target="_blank">JUA Continental 2011</a></li>
-                 <li><a href="http://217.79.182.227/www.judo-world.net/aju/continental/2011_dakar/" target="_blank">AJU Continental 2011</a></li>
-                 <li><a href="http://www.oceaniajudo.org" target="_blank">OJU Continental 2011</a></li>
-                <li><a href="http://www.judo-world.net/eju/european/2011_istanbul/" target="_blank">EJU Continental 2011</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/ijf/grand_prix/2011_baku/" target="_blank">Grand Prix, 2011 Baku</a></li>
-                <li><a href="http://www.judo-world.net/ijf/grand_slam/2011_moscow/" target="_blank">Grand Slam, Moscow 2011</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/eju/world_cup/2011_bucharest/" target="_blank">World Cup Men, Bucharest 2011</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/eju/world_cup/2011_madrid/" target="_blank">World Cup Women, Madrid 2011</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/eju/world_cup/2011_lisbon/" target="_blank">World Cup Women, Lisbon 2011</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/eju/world_cup/2011_tallinn/" target="_blank">World Cup Men, Tallinn 2011</a></li>
-                <li><a href="http://217.79.182.227/www.judo-world.net/ijf/grand_slam/2011_rio/" target="_blank">Grand Slam, Rio 2011</a></li>
-<li><a href="http://217.79.182.227/www.judo-world.net/pjc/world_cup/2011_sao_paulo/" target="_blank">World Cup, Sao Paulo 2011</a></li>
-<li><a href="http://www.judo-world.net/pjc/world_cup/2011_miami/" target="_blank">World Cup, Miami 2011</a></li>
-<li><a href="http://217.79.182.227/www.judo-world.net/pjc/world_cup/2011_puerto_la_cruz/" target="_blank">World Cup, Purto la Cruz 2011</a></li> 
-<li><a href="http://217.79.182.227/www.judo-world.net/pjc/world_cup/2011_san_salvador/" target="_blank">World Cup, San Salvador 2011</a></li>   
-<li><a href="http://217.79.182.227/www.judo-world.net/ijf/world/wc2011/" target="_blank">World Championships, Paris 2011</a></li>               
-<li><a href="http://www.judo-world.net/jua/world_cup/2011_ulaanbaatar/" target="_blank">World Cup, Ulaanbaatar 2011</a></li>                              
-<li><a href="http://www.judo-world.net/jua/world_cup/2011_tashkent/" target="_blank">World Cup, Tashkent 2011</a></li>                              
-<li><a href="http://www.judo-world.net/jua/world_cup/2011_almaty/" target="_blank">World Cup, Almaaty 2011</a></li>                  
-<li><a href="http://www.judo-world.net/eju/world_cup/2011_rome/" target="_blank">World Cup Women, Rome 2011</a></li>                              
-<li><a href="http://www.judo-world.net/eju/world_cup/2011_liverpool/" target="_blank">World Cup Men, Liverpool 2011</a></li>                  
-<li><a href="http://www.judo-world.net/eju/world_cup/2011_minsk" target="_blank">World Cup Women, Minsk 2011</a></li>                              
-<li><a href="http://www.judo-world.net/eju/world_cup/2011_baku" target="_blank">World Cup Men, Baku 2011</a></li>  
-<li><a href="http://217.79.182.227/www.judo-world.net/ijf/grand_prix/2011_abu_dhabi/" target="_blank">Grand Prix, 2011 Abu Dhabi</a></li>
-<li><a href="http://217.79.182.227/www.judo-world.net/oju/world_cup/wcup_samoa2011/" target="_blank">World Cup, 2011 Samoa</a></li>                 
-<li><a href="http://217.79.182.227/www.judo-world.net/ijf/grand_prix/2011_amsterdam/" target="_blank">Grand Prix, 2011 Amsterdam</a></li>  
-<li><a href="http://217.79.182.227/www.judo-world.net/jua/world_cup/2011_jeju/" target="_blank">World Cup, 2011 Korea</a></li>
-<li><a href="http://217.79.182.227/www.judo-world.net/ijf/grand_slam/2011_tokyo/" target="_blank">Grand Slam, 2011 Tokyo</a></li> 
-<li><a href="http://217.79.182.227/www.judo-world.net/ijf/grand_prix/2011_qingdao/" target="_blank">Grand Prix, 2011 Qing Dao</a></li> 
-<li><a href="http://www.judo-world.net/ijf/masters/2012_almaty/" target="_blank">World Master, 2012 Almaty</a></li> 
-<li><a href="http://www.judo-world.net/eju/world_cup/2012_sofia" target="_blank">World Cup, 2012 Sofia</a></li> 
-<li><a href="http://www.judo-world.net/eju/world_cup/2012_tblisi" target="_blank">World Cup, 2012 Tblisi</a></li> 
-<li><a href="http://www.judo-world.net/ijf/grand_slam/2012_paris" target="_blank">Grand Slam, 2012 Paris</a></li> 
-<li><a href="http://www.judo-world.net/eju/world_cup/2012_oberwart" target="_blank">World Cup, 2012 Oberwart</a></li>
-<li><a href="http://217.79.182.227/www.judo-world.net/eju/world_cup/2012_budapest" target="_blank">World Cup, 2012 Budapest</a></li>
-<li><a href="http://www.judo-world.net/ijf/grand_prix/2012_duesseldorf/" target="_blank">Grand Prix, 2012 Duesseldorf</a></li>
-<li><a href="http://217.79.182.227/www.judo-world.net/eju/world_cup/2012_prague/" target="_blank">World Cup Men, 2012 Prague</a></li>
-<li><a href="http://www.judo-world.net/eju/world_cup/2012_warsaw/" target="_blank">World Cup Women, 2012 Warsaw</a></li>
-<li><a href="http://www.judo-world.net/aju/continental/2012_agadir" target="_blank">Continental Championships, 2012 Africa</a></li>
-<li><a href="http://www.judo-world.net/pjc/continental/2012_montreal/" target="_blank">Continental Championships, 2012 Panamerica</a></li>
-<li><a href="http://www.judo-world.net/eju/european/2012_chelyabinsk/" target="_blank">Continental Championships, 2012 Europe</a></li>
-<li><a href="http://www.judo-world.net/jua/continental/2012_tashkent/" target="_blank">Continental Championships, 2012 Asia</a></li>
-<li><a href="http://www.judo-world.net/oju/continental/2012_cairns/" target="_blank">Continental Championships, 2012 Oceania</a></li>
+                <li>Grand_prix, 2010 Tunis          
+                <li>World cup, 2010 Cairo           
+                <li>Grand slam, 2010 Rio            
+                <li>World cup, 2010 Sao Paulo       
+                <li>World cup, 2010 Bucharest       
+                <li>World cup, 2010 Madrid          
+                <li>World cup, 2010 Tallinn         
+                <li>World cup, 2010 Lisbon          
+                <li>World cup, 2010 Isla Margarita  
+                <li>World cup, 2010 San Salvador    
+                <li>Grand slam, 2010 Moscow,        
+                <li>World Cup, 2010 Mongolia        
+                <li>OJU Champs, 2010 Canberra       
+                <li>World Cup, 2010 Miami           
+                <li>World Champs, 2010 Tokyo        
+                <li>World Cup Men, 2010 Almaty      
+                <li>World Cup Women, 2010 Tashkent  
+                <li>World Cup Women, 2010 GB        
+                <li>World Cup Men, 2010 Rome        
+                <li>World Cup Women, 2010 Baku      
+                <li>World Cup Men, 2010 Minsk       
+                <li>Grand Prix, 2010 Rotterdam      
+                <li>World Cup, 2010 Samoa           
+                <li>Grand Prix, 2010 Abu Dhabi      
+                <li>World Cup, 2010 Suwon           
+                <li>Grand Slam, 2010 Tokyo          
+                <li>Grand Prix, 2010 Qingdao        
+                <li>World Masters, 2011 Baku        
+                <li>World Cup Women, 2011 Sofia     
+                <li>World Cup Men, 2011 Tblisi      
+                <li>Grand Slam, 2011 Paris          
+                <li>World Cup Men, 2011 Budapest    
+                <li>World Cup Women, 2011 Oberwart  
+                <li>Grand Prix, 2011 Dusseldorf     
+                <li>World Cup Women, 2011 Prague    
+                <li>World Cup Men, 2011 Warsaw      
+                <li>PJC Continental 2011            
+                <li>JUA Continental 2011            
+                <li>AJU Continental 2011            
+                <li>OJU Continental 2011            
+                <li>EJU Continental 2011            
+                <li>Grand Prix, 2011 Baku           
+                <li>Grand Slam, Moscow 2011         
+                <li>World Cup Men, Bucharest 2011   
+                <li>World Cup Women, Madrid 2011    
+                <li>World Cup Women, Lisbon 2011    
+                <li>World Cup Men, Tallinn 2011     
+                <li>Grand Slam, Rio 2011            
+                <li>World Cup, Sao Paulo 2011       
+                <li>World Cup, Miami 2011           
+                <li>World Cup, Purto la Cruz 2011   
+                <li>World Cup, San Salvador 2011    
+                <li>World Championships, Paris 2011            
+                <li>World Cup, Ulaanbaatar 2011                                
+                <li>World Cup, Tashkent 2011                                   
+                <li>World Cup, Almaaty 2011                        
+                <li>World Cup Women, Rome 2011                                 
+                <li>World Cup Men, Liverpool 2011                  
+                <li>World Cup Women, Minsk 2011                                
+                <li>World Cup Men, Baku 2011        
+                <li>Grand Prix, 2011 Abu Dhabi      
+                <li>World Cup, 2011 Samoa                         
+                <li>Grand Prix, 2011 Amsterdam      
+                <li>World Cup, 2011 Korea           
+                <li>Grand Slam, 2011 Tokyo          
+                <li>Grand Prix, 2011 Qing Dao       
+                <li>World Master, 2012 Almaty       
+                <li>World Cup, 2012 Sofia           
+                <li>World Cup, 2012 Tblisi          
+                <li>Grand Slam, 2012 Paris          
+                <li>World Cup, 2012 Oberwart        
+                <li>World Cup, 2012 Budapest        
+                <li>Grand Prix, 2012 Duesseldorf    
+                <li>World Cup Men, 2012 Prague      
+                <li>World Cup Women, 2012 Warsaw    
+                <li>Continental Championships, 2012 Africa      
+                <li>Continental Championships, 2012 Panamerica  
+                <li>Continental Championships, 2012 Europe      
+                <li>Continental Championships, 2012 Asia        
+                <li>Continental Championships, 2012 Oceania     
 
   </ul>  
 <hr />
