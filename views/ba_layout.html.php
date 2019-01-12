@@ -178,6 +178,7 @@
 
   <div id="footer" class="dimensions">
   &copy; 2010, 2011 Lance Wicks - all rights reserved - RWJL V.1.0
+  - Software available at <a href="https://github.com/lancew/rwjl">https://github.com/lancew/rwjl</a>
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   you're not allowed to use this template free of charge if you remove or modify the following line(s)... see licence(.txt)
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
