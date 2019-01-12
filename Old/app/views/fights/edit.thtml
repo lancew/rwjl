@@ -1,0 +1,41 @@
+<h1>Edit Fight</h1>
+<form method="post" action="<?php echo $html->url('/fights/edit')?>">
+
+
+<?php echo $html->hidden('Fight/id'); ?>
+    <p>
+        Challenger:
+        <?php echo $html->selectTag('Fight/challenger_user_id', $userslist);?> 
+    
+		
+    </p>
+
+    <p>
+        Challenged:
+        <?php echo $html->selectTag('Fight/challenged_user_id', $userslist);?> 
+       
+    </p>
+
+    <p>
+        Date for fight:
+        <?php echo $html->input('Fight/fight_date', array('size' => '50'))?>
+        <small>Format: YYYY-MM-DD.  For example <?php echo date('Y-m-j');?> is today's date. </small>
+
+    </p>
+
+    <p>
+        Comments:
+        <?php echo $html->input('Fight/comments_from_challenger', array('size' => '50'))?>
+    </p>
+
+
+
+    <?php $fight['Fight']['create_date'] = date('Y-m-j'); ?>
+    <php echo $fight['Fight']['create_date']; ?>
+    <?php $tmp_values = 'value='.date('Y-m-j'); ?>
+    <?php echo $html->hidden('Fight/create_date',$tmp_values); ?>
+    <p>
+        <?php echo $html->submit('Save') ?>
+    </p>
+</form>
+

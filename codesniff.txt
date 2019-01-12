@@ -1,0 +1,6 @@
+
+Warning: include_once(PHP/CodeSniffer/CLI.php): failed to open stream: No such file or directory in /usr/bin/phpcs on line 24
+
+Warning: include_once(): Failed opening 'PHP/CodeSniffer/CLI.php' for inclusion (include_path='.:') in /usr/bin/phpcs on line 24
+
+Fatal error: Class 'PHP_CodeSniffer_CLI' not found in /usr/bin/phpcs on line 27

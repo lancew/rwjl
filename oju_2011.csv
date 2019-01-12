@@ -1,0 +1,89 @@
+-48,FOEILLET,Elodie,New Caledonia,DOWNING,Hannah,New Zealand,2,1
+-48,FOEILLET,Elodie,New Caledonia,GIRARD,Valena,French Polynesia,2,1
+-48,DOWNING,Hannah,New Zealand,GIRARD,Valena,French Polynesia,2,1
+-48,COPPLEMAN,Alice,Australia,FONG,Jacqueline,New Zealand,2,1
+-48,FOEILLET,Elodie,New Caledonia,COPPLEMAN,Alice,Australia,2,1
+-48,DOWNING,Hannah,New Zealand,FONG,Jacqueline,New Zealand,2,1
+-52,ROUSE,Emma,New Zealand,TAUOTAHA,Reia,French Polynesia,1,2
+-52,TROTTER,Hannah,Australia,RIVAL,Cindy,New Caledonia,2,1
+-52,CHERVONSKY,Sonya,Australia,TAUOTAHA,Reia,French Polynesia,2,1
+-52,TROTTER,Hannah,Australia,CAMAILLE,Hinatea,French Polynesia,2,1
+-52,CHERVONSKY,Sonya,Australia,TROTTER,Hannah,Australia,1,2
+-52,ROUSE,Emma,New Zealand,CAMAILLE,Hinatea,French Polynesia,2,1
+-52,RIVAL,Cindy,New Caledonia,TAUOTAHA,Reia,French Polynesia,2,1
+-57,WUILLMET,Laetitia,French Polynesia,RENZI,Carli,Australia,1,2
+-57,MANUEL,Darcina,New Zealand,CORFIOS,Margi,Australia,1,2
+-57,WUILLMET,Laetitia,French Polynesia,MANUEL,Darcina,New Zealand,1,2
+-57,RENZI,Carli,Australia,CORFIOS,Margi,Australia,2,1
+-63,KOENIG,Kylie,Australia,VAHIRUA,Vaihei,French Polynesia,2,1
+-63,KELLY,Stevie,Australia,BILBAUT,Tumata,French Polynesia,2,1
+-63,KOENIG,Kylie,Australia,CLUTHA,Mahana,New Zealand,2,1
+-63,VAHIRUA,Vaihei,French Polynesia,CLUTHA,Mahana,New Zealand,1,2
+-63,CLUTHA,Mahana,New Zealand,BILBAUT,Tumata,French Polynesia,2,1
+-63,KOENIG,Kylie,Australia,KELLY,Stevie,Australia,2,1
+-70,DE VILLIERS,Moira,New Zealand,TEAI,Jade,French Polynesia,2,1
+-70,HILL,Debbie,Australia,FIRUU,Vaiana,French Polynesia,2,1
+-70,DE VILLIERS,Moira,New Zealand,COLLINS,Sara,Australia,2,1
+-70,TEAI,Jade,French Polynesia,COLLINS,Sara,Australia,1,2
+-70,COLLINS,Sara,Australia,FIRUU,Vaiana,French Polynesia,2,1
+-70,DE VILLIERS,Moira,New Zealand,HILL,Debbie,Australia,2,1
+-78,KOPECNY,Isabelle,Australia,GRANT,Stephanie,Australia,2,1
+p78,SHEPARD,Janelle,Australia,RASOKISOKI,Sisilia,Fiji,2,1
+-60,DICKINS,Arnie,Australia,CHEVALIER,Cyril,New Caledonia,2,1
+-60,LOMO,Tony,Solomon Island,SACHET,Vetea,French Polynesia,1,2
+-60,DICKINS,Arnie,Australia,GOFF,Corentin le,French Polynesia,2,1
+-60,DAQUINO,Matt,Australia,SACHET,Vetea,French Polynesia,2,1
+-60,CHEVALIER,Cyril,New Caledonia,SACHET,Vetea,French Polynesia,2,1
+-60,LOMO,Tony,Solomon Island,GOFF,Corentin le,French Polynesia,1,2
+-60,DICKINS,Arnie,Australia,DAQUINO,Matt,Australia,1,2
+-66,DOS SANTOS,Ivo,Australia,DELANNE,Cedric,French Polynesia,2,1
+-66,BROWN,Steven,Australia,BRINCKFIELDT,Elden,French Polynesia,2,1
+-66,DOS SANTOS,Ivo,Australia,LEAT,Alister,New Zealand,2,1
+-66,DELANNE,Cedric,French Polynesia,LEAT,Alister,New Zealand,1,2
+-66,LEAT,Alister,New Zealand,BRINCKFIELDT,Elden,French Polynesia,2,1
+-66,DOS SANTOS,Ivo,Australia,BROWN,Steven,Australia,2,1
+-73,MORGAN,Abraham,Solomon Island,DONEGAN,Ben,Australia,1,2
+-73,WATERHOUSE,Abner,Samoa,PEJIC,Nikola,Australia,1,2
+-73,VUI,Kinsley,Papua New Guinea,CALDER,Lee,New Zealand,1,2
+-73,CHOI,Sean,New Zealand,MICHAUD,Jerome,French Polynesia,2,1
+-73,DONEGAN,Ben,Australia,SMITH,Aleni,Samoa,2,1
+-73,TRINDADE,Abedias,New Caledonia,PEJIC,Nikola,Australia,2,1
+-73,HARTMANN,Yannick,French Polynesia,CALDER,Lee,New Zealand,1,2
+-73,MORGAN,Abraham,Solomon Island,SMITH,Aleni,Samoa,1,2
+-73,VUI,Kinsley,Papua New Guinea,HARTMANN,Yannick,French Polynesia,1,2
+-73,CHOI,Sean,New Zealand,DONEGAN,Ben,Australia,2,1
+-73,TRINDADE,Abedias,New Caledonia,CALDER,Lee,New Zealand,2,1
+-73,MICHAUD,Jerome,French Polynesia,SMITH,Aleni,Samoa,1,2
+-73,PEJIC,Nikola,Australia,HARTMANN,Yannick,French Polynesia,2,1
+-73,SMITH,Aleni,Samoa,CALDER,Lee,New Zealand,1,2
+-73,PEJIC,Nikola,Australia,DONEGAN,Ben,Australia,2,1
+-73,CHOI,Sean,New Zealand,TRINDADE,Abedias,New Caledonia,2,1
+-81,STOWERS,Frank,Samoa,BERGER,Jonathan,New Caledonia,1,2
+-81,IVERSON,Brent,Australia,MATYN,Mickael,French Polynesia,2,1
+-81,BERGER,Jonathan,New Caledonia,NAULU,Josateki,Fiji,2,1
+-81,BREWER,Mark,New Zealand,MARTEL,Xavier,Samoa,2,1
+-81,ZELLNER,Ben,Australia,LUCAS,Toanui,French Polynesia,2,1
+-81,STOWERS,Frank,Samoa,NAULU,Josateki,Fiji,1,2
+-81,IVERSON,Brent,Australia,BERGER,Jonathan,New Caledonia,2,1
+-81,BREWER,Mark,New Zealand,ZELLNER,Ben,Australia,2,1
+-81,MATYN,Mickael,French Polynesia,NAULU,Josateki,Fiji,1,2
+-81,MARTEL,Xavier,Samoa,LUCAS,Toanui,French Polynesia,1,2
+-81,NAULU,Josateki,Fiji,ZELLNER,Ben,Australia,2,1
+-81,LUCAS,Toanui,French Polynesia,BERGER,Jonathan,New Caledonia,1,2
+-81,IVERSON,Brent,Australia,BREWER,Mark,New Zealand,2,1
+-90,SLYFIELD,Tim,New Zealand,OTCENASEK,Anavai,French Polynesia,2,1
+-90,FOGAGNOLO,Priscus,Australia,DILL-RUSSELL,Ryan,New Zealand,1,2
+-90,ANTHONY,Mark,Australia,SLYFIELD,Tim,New Zealand,2,1
+-90,DILL-RUSSELL,Ryan,New Zealand,CHEVALIER,David,French Polynesia,2,1
+-90,OTCENASEK,Anavai,French Polynesia,CHEVALIER,David,French Polynesia,1,2
+-90,FOGAGNOLO,Priscus,Australia,SLYFIELD,Tim,New Zealand,2,1
+-90,ANTHONY,Mark,Australia,DILL-RUSSELL,Ryan,New Zealand,2,1
+-100,KELLY,Daniel,Australia,PAPAI,Jerome,New Caledonia,2,1
+-100,KOSTER,Jason,New Zealand,DIDIER,Duke,Australia,2,1
+-100,PAPAI,Jerome,New Caledonia,DIDIER,Duke,Australia,1,2
+-100,KELLY,Daniel,Australia,KOSTER,Jason,New Zealand,2,1
+p100,PICARD,Jeremy,French Polynesia,ANDREWARTHA,Jake,Australia,2,1
+p100,PICARD,Jeremy,French Polynesia,COURTINE,Stephane,New Caledonia,1,2
+p100,ANDREWARTHA,Jake,Australia,COURTINE,Stephane,New Caledonia,2,1
+p100,PICARD,Jeremy,French Polynesia,COURTINE,Stephane,New Caledonia,2,1
+p100,PICARD,Jeremy,French Polynesia,ANDREWARTHA,Jake,Australia,2,1

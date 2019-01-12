@@ -1,0 +1,37 @@
+<h1>Create User</h1>
+<form method="post" action="<?php echo $html->url('/users/create')?>">
+    <p>
+        Username:
+        <?php echo $html->input('User/username', array('size' => '50'))?>
+        <?php echo $html->tagErrorMsg('User/username', 'Username is required.') ?>
+        
+    </p>
+    <p>
+      <em>Password</em> (choose a good safe/long one):
+      <?php echo $html->input('User/password', array('size' => '50'))?>
+      <?php echo $html->tagErrorMsg('User/password', 'Password is required.') ?>   <br />
+    </p>
+    <br />&nbsp;<br />
+        <p>
+        <em>The following info is not displayed to other users</em> <br /> 
+        Firstname: <?php echo $html->input('User/fname', array('size' => '50'))?>
+        <?php echo $html->tagErrorMsg('User/fname', 'First name is required.') ?>
+        Last/Family/Surname: <?php echo $html->input('User/lname', array('size' => '50'))?>
+        <?php echo $html->tagErrorMsg('User/lname', 'Last name is required.') ?>
+    </p>
+
+    <p>
+      <em>Email Address</em> (again not shared):
+      <?php echo $html->input('User/email_address', array('size' => '50'))?>
+      <?php echo $html->tagErrorMsg('User/email_address', 'Email address is required.') ?>   <br />
+    </p>
+
+    <br />&nbsp;<br />    
+
+    <p>
+        <?php echo $html->submit('Save') ?>
+    </p>
+</form>
+
+
+	  	 

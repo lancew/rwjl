@@ -1,0 +1,38 @@
+<h1>Users</h1>
+<?php echo $html->link("Create New User", "/users/create"); ?>
+<table>
+    <tr>
+        <th>Username</th>
+        <th>ELO Rating</th>
+        <th>Actions</th>
+
+    </tr>
+
+   <!-- Here's where we loop through our $users array, printing out user info -->
+    
+    <?php foreach ($users as $user): ?>
+    <tr>
+        <td>
+            <?php echo $html->link($user['User']['username'], "/users/view/".$user['User']['id']); ?>
+        </td>
+        <td><?php echo $user['User']['elo_rating']; ?></td>
+        <td>
+	<?php echo $html->link('View', "/users/view/".$user['User']['id']); ?>
+	<?php // echo $html->link('Edit', '/users/edit/'.$user['User']['id']);?>
+	<?php // echo $html->link(
+          //      'Delete',
+          //      "/users/delete/{$user['User']['id']}",
+          //      null,
+          //      'Are you sure?'
+          //  );
+          ?>
+	 </td>
+
+
+
+    </tr>
+    <?php endforeach; ?>
+
+	
+
+</table>

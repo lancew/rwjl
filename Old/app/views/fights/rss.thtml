@@ -1,0 +1,20 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel> 
+    <title>RWJL Fights Feed</title> 
+    <link>http://www.rwjl.net/</link> 
+    <description>Latest completed fights on www.rwjl.net</description> 
+    <language>en-us</language> 
+    <pubDate><?php echo date("D, j M Y H:i:s", gmmktime()) . ' GMT';?></pubDate> 
+    <generator>RWJL</generator> 
+    <webMaster>lw@judocoach.com (Lance Wicks)</webMaster> 
+    <?php foreach ($fights as $fight): ?> 
+    <item> 
+      <title>Fight:<?php echo $fight['Challenger']['id']; ?></title> 
+      <link>http://www.rwjl.net/fights/view/<?php echo $fight['Fight']['id']; ?></link> 
+      <description><?php echo $fight['Challenger']['username'] ." fought " . $fight['Challenged']['username']; ?></description> 
+      <guid>http://www.rwjl.net/fights/view/<?php echo $fight['Fight']['id']; ?></guid> 
+    </item> 
+    <?php endforeach; ?> 
+    <atom:link href="http://www.rwjl.net/fights/rss" rel="self" type="application/rss+xml" />
+  </channel> 
+</rss> 

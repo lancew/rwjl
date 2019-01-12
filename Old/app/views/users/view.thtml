@@ -1,0 +1,59 @@
+<h2><?php echo $user['User']['username']?></h2>
+
+<p><small>Wins: <?php echo $user['User']['wins']?></small></p>
+<p><small>Losses: <?php echo $user['User']['losses']?></small></p>
+
+<p>ELO Rating: <?php echo $user['User']['elo_rating']?></p>
+
+
+<h2>Fight Record</h2>
+
+
+<table>
+ <tr>
+        
+        
+        <th>Versus</th>
+        <th>Win/Loss</th>
+		<th>Date (yyyy-mm-dd)</th>
+ </tr>
+
+<?php 
+	foreach ($fights as $fight):
+	echo "<tr>";
+
+		
+		echo "<td>";
+		if ($user['User']['id'] != $fight['Fight']['challenger_user_id']) {
+			echo $fight['Challenger']['username'];
+		} ELSE{
+			echo $fight['Challenged']['username'];
+		}
+
+
+		echo "</td>";
+		
+		echo "<td>";
+		//echo $user['User']['id'] . " - " . $fight['Fight']['winner_from_challenger'];
+		if ($user['User']['id'] == $fight['Fight']['winner_from_challenger'] or $user['User']['id'] == $fight['Fight']['winner_from_challenged']) {
+			echo "WIN!";
+		} ELSE{
+			echo "loss";
+		}
+		
+		//echo "<pre>";
+		//echo print_r($fight);
+		//echo "</pre>";
+				
+		echo "</td>";
+		
+		echo "<td>";
+		echo $fight['Fight']['fight_date'];
+		echo "</td>";
+
+	echo "</tr>";
+	endforeach; 
+	
+?>
+
+</table>

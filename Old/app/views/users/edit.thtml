@@ -1,0 +1,39 @@
+<h1>Edit User</h1>
+<form method="post" action="<?php echo $html->url('/users/edit')?>">
+<?php echo $html->hidden('User/id'); ?>
+    <p>
+        Username:
+        <?php echo $html->input('User/username', array('size' => '50'))?>
+        <?php echo $html->tagErrorMsg('User/username', 'Username is required.') ?>
+    </p>
+
+        <p>
+        <em>Real Name</em> (not displayed to other users):   <br />&nbsp;<br />
+        Firstname: <?php echo $html->input('User/fname', array('size' => '50'))?>
+        <?php echo $html->tagErrorMsg('User/fname', 'First name is required.') ?>   <br />
+        Last/Family/Surname: <?php echo $html->input('User/lname', array('size' => '50'))?>
+        <?php echo $html->tagErrorMsg('User/lname', 'Last name is required.') ?>
+    </p>
+
+    <p>
+      <em>Email Address</em> (again not shared):
+      <?php echo $html->input('User/email_address', array('size' => '50'))?>
+      <?php echo $html->tagErrorMsg('User/email_address', 'Email address is required.') ?>   <br />
+    </p>
+
+     
+    <p>
+      ELO Rating:
+      <?php echo $html->input('User/elo_rating', array('size' => '50'))?>
+     
+    </p>
+
+
+
+    <p>
+        <?php echo $html->submit('Save') ?>
+    </p>
+</form>
+
+
+

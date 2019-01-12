@@ -1,0 +1,69 @@
+<h1>Record Results</h1>
+<h2><?php echo $fight['Challenger']['username']; ?> VS. <?php echo $fight['Challenged']['username'];?> </h2>
+
+<form method="post" action="<?php echo $html->url('/results/record')?>">
+<?php echo $html->hidden('Fight/id'); ?>
+
+
+<?php //echo print_r($userslist); ?>
+<?php //echo print_r($fight); ?>
+
+ 
+			
+			<?php
+			// ---------------------------------------------------------------------------
+			if ($session->read('User.id') == $fight['Fight']['challenger_user_id']) {
+			?>
+			
+				<h3>Winner:</h3>
+	
+				<p>    
+        			<?php 
+        		
+        			echo $html->selectTag('Fight/winner_from_challenger', $userslist);
+        		
+        			?> 
+		 	   </p>   
+    
+
+
+    			<p>
+      		  		Comments:
+        			<?php echo $html->input('Fight/comments_from_challenger', array('size' => '50'))?>
+				</p>
+		
+				<?php } // -------------------------------------------------------------- ?>
+		
+			
+			<?php
+			// ---------------------------------------------------------------------------
+			if ($session->read('User.id') == $fight['Fight']['challenged_user_id']) {
+			?>
+			
+			<h3>Winner:</h3>
+	
+			<p>    
+        		<?php echo $html->selectTag('Fight/winner_from_challenged', $userslist);?> 
+		    </p>   
+    
+
+
+    		<p>
+        		Comments:
+        		<?php echo $html->input('Fight/comments_from_challenged', array('size' => '50'))?>
+			</p>
+		
+			<?php } // -------------------------------------------------------------- ?>
+		
+   			<p>
+        		Scheduled Date date fight:
+        		<?php echo $html->input('Fight/fight_date', array('size' => '50'))?>
+
+   			</p>
+    <p>
+        <?php echo $html->submit('Save') ?>
+    </p>
+    &nbsp;<br />
+    <p><small>Fight ID:<?php echo $fight['Fight']['id']?> Created: <?php echo $fight['Fight']['create_date']?></small></p>
+
+</form>
