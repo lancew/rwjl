@@ -1868,7 +1868,7 @@ function Export_fights($start='12488',$finish='12806')
 
 
     $db = 'data/rwjl.db';
-    $dbo = new SQLiteDatabase("$db");
+    $dbo = new SQLite3("$db");
     $query = "SELECT * FROM fights
               WHERE id BETWEEN $start and $finish;";
     $result = $dbo->query($query) or die("Error in query");
@@ -1886,8 +1886,8 @@ function Export_fights($start='12488',$finish='12806')
     echo '"Date","Event","Round","category","Surname1","FirstName1","Nation1","Surname2","Firstname2","Nation2","P1Score","P2Score","Winner"';
     echo '<br />';
 
-    while ($result->valid()) {
-        $row = $result->current();
+    while ($row = $result->fetchArray()) {
+        //$row = $result->current();
         
         // Event Date
         echo '"';
@@ -1959,7 +1959,7 @@ function Export_fights($start='12488',$finish='12806')
         ob_flush();
         
         
-        $result->next();
+        //$result->next();
     }
 
 
