@@ -1060,21 +1060,21 @@ function Fights_for_player($player = null)
 
     // connect to the DB and run query
     $db = 'data/rwjl.db';
-    $dbo = new SQLiteDatabase("$db");
+    $dbo = new SQLite3("$db");
     $query = "SELECT * FROM fights
               WHERE p1_name ='$player' or
               p2_name ='$player';";
     //echo $query;
     $result = $dbo->query($query) or die("Error in query");
     
-    $scores = '';
+    $scores = array();
     
     $html = '<table>';
     $html .= '<tr><th>Fight ID</th><th>Blue</th><th>Blue Score</th><th>White Score</th><th>White</th><th>Ranking points for <br />'.$player.'</th><th>Event</th</tr>';
     //loop through the query rows and add to the html table
-    while ($result->valid()) {
+    while ($row = $result->fetchArray()) {
         // fetch current row
-        $row = $result->current();
+        //$row = $result->current();
         //echo '<pre>';
         //print_r($row);
         //echo '</pre>';
@@ -1109,6 +1109,7 @@ function Fights_for_player($player = null)
             $change = $row['p1_rank_post'] - $row['p1_rank_pre'];
             $html .= $row['p1_rank_post'].sprintf(" (%+d)", $change);
             //$scores[] = $row['p1_rank_post'];
+            
             $scores[] = $change;
         } else {
             $change = $row['p2_rank_post'] - $row['p2_rank_pre'];
@@ -1126,7 +1127,7 @@ function Fights_for_player($player = null)
 
 
 
-        $result->next();
+        //$result->next();
     }
     $html .= '</table>';
     
