@@ -67,7 +67,3 @@ dispatch('/event/delete', 'Delete_event');
 
 
 run();
-
-
-
-?>

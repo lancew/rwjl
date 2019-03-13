@@ -34,10 +34,11 @@ function Home_page()
  * @access public
  * @return void
  */
-function Get_file($event_region = null,
+function Get_file(
+    $event_region = null,
     $event_type = null,
     $event_name = null,
-    $event_category = null 
+    $event_category = null
 ) {
 
     // Get the parameters from the URL
@@ -48,7 +49,7 @@ function Get_file($event_region = null,
 
     // These are the components of the URL of the page we
     // are going to download.
-    $prefix = 'http://217.79.182.227/www.judo-world.net/'; 
+    $prefix = 'http://217.79.182.227/www.judo-world.net/';
     $suffix1 = '/tta.php?tta_mode=&aktion=fights&klasse=';
     $suffix2 = '&sprache=english';
 
@@ -60,7 +61,7 @@ function Get_file($event_region = null,
     }
     if ($event_name == '2011_sofia') {
         $prefix = 'http://www.judo-world.net/';
-    }    
+    }
     if ($event_name == '2011_duesseldorf') {
         $prefix = 'http://www.judo-world.net/';
     }
@@ -105,7 +106,7 @@ function Get_file($event_region = null,
     }
     if ($event_name == '2012_almaty') {
         $prefix = 'http://www.judo-world.net/';
-    }    
+    }
     if ($event_name == '2012_almaty') {
         $prefix = 'http://www.judo-world.net/';
     }
@@ -223,7 +224,6 @@ function Import_html()
     
 
     foreach ($rows as $row) {
-        
         $cols = $row->getElementsByTagName('td');
 
         //Strip all the HTML tags out of the data
@@ -238,8 +238,6 @@ function Import_html()
 
 
     unlink('data/temp.txt');
-    
-
 }
 
 
@@ -254,7 +252,7 @@ function Import_html()
  *
  * @param mixed $raw_data
  * @param mixed $event_data
- * 
+ *
  * @access public
  * @return void
  */
@@ -263,7 +261,7 @@ function Process_row($raw_data, $event_data)
 
     
     /***
- * Get each column by tag name 
+ * Get each column by tag name
 ***/
 
     //$cols = $row->getElementsByTagName('td');
@@ -291,13 +289,13 @@ function Process_row($raw_data, $event_data)
     if (strpos($raw_data, "Semifinal")) {
         $round = "Semifinal";
     }
-    if (strpos($raw_data, "Final")) { 
+    if (strpos($raw_data, "Final")) {
         $round = "Final";
     }
-    if (strpos($raw_data, "Fight for 3rd place")) { 
+    if (strpos($raw_data, "Fight for 3rd place")) {
         $round = "Fight for 3rd place";
     }
-    if (strpos($raw_data, "Repechage")) { 
+    if (strpos($raw_data, "Repechage")) {
         $round = "Repechage";
     }
 
@@ -406,7 +404,7 @@ function Process_row($raw_data, $event_data)
         if ($answer === 1) {
             $p1_score = 2;
             $p2_score = 1;
-            //echo ' 1 ';
+        //echo ' 1 ';
         } else {
             $p1_score = 1;
             $p2_score = 2;
@@ -472,7 +470,6 @@ function Process_row($raw_data, $event_data)
     echo '<hr />';
     flush();
     ob_flush();
-
 }
 
 
@@ -615,15 +612,15 @@ function Get_all()
             foreach ($categories as $cat) {
 
                   // call the URL for the event and category
-                  echo '<br />'.$base_url.'get_file/'.$event.$cat;
-                  file_get_contents($base_url.'get_file/'.$event.$cat);
-                  // call the URL to import the data downloaded
+                echo '<br />'.$base_url.'get_file/'.$event.$cat;
+                file_get_contents($base_url.'get_file/'.$event.$cat);
+                // call the URL to import the data downloaded
             
             
-                  $text = file_get_contents($base_url.'import');
-                  echo '<br>'.$text;
-                  // Flush simply allows results to be pushed out to the web page
-                  flush();
+                $text = file_get_contents($base_url.'import');
+                echo '<br>'.$text;
+                // Flush simply allows results to be pushed out to the web page
+                flush();
             }
         }
         if ($count > 9) {
@@ -644,7 +641,6 @@ function Get_all()
 
     // Turn off maintenance mode
     echo Maintenance_mode('disable');
-    
 }
 
 
@@ -668,13 +664,12 @@ function Show_categories()
  * This function displays the category given to it via URL parameter.
  *
  * @param mixed $category (default: null)
- * 
+ *
  * @access public
  * @return void
  */
 function Show_category($category = null)
 {
-
     if (!$category) {
         $category = params('category');
     }
@@ -767,7 +762,6 @@ function Show_category($category = null)
  */
 function Show_country($country = null)
 {
-
     if (!$country) {
         $country = params('country');
     }
@@ -793,7 +787,7 @@ function Show_country($country = null)
     // Add average points for country
     $html .= '<p>Average Ranking points: ';
     $html .= (int)Country_Average_rank($country);
-    $html .= '</p>'; 
+    $html .= '</p>';
     
     // Add average win rate for country
     $html .= '<p>Average win rate: ';
@@ -894,7 +888,7 @@ function Full_list()
     $html .= '<thead><tr><th class="table-sortable:numeric">Position</th><th class="table-sortable:alphanumeric">Name</th><th class="table-sortable:numeric">Rank</th><th class="table-sortable:alphanumeric">Category</th><th class="table-sortable:alphanumeric">Country</th><th style="padding-left:10px;" class="table-sortable:numeric">Wins</th><th class="table-sortable:numeric">Losses</th><th class="table-sortable:numeric">Total Fights</th><th class="table-sortable:numeric">Win rate</th></tr></thead>';
 
     //loop through the query rows and add to the html table
-    while ( $row = $result->fetchArray() ) {
+    while ($row = $result->fetchArray()) {
         // fetch current row
         //$row = $result->current();
         $html .= '<tr>';
@@ -997,7 +991,7 @@ function Show_all_countries()
         $html .= '</td>';
         $html .= '<td align="center">';
         $html .= (int)Country_Total_players($country);
-        $html .= '</td>';        
+        $html .= '</td>';
         $html .= '</td>';
         $html .= '<td align="center">';
         $html .= Country_Win_rate($country);
@@ -1007,7 +1001,7 @@ function Show_all_countries()
         $total_avg_ranking += (int)Country_Average_rank($country);
         $total_total_points += (int)Country_Total_rank($country);
         $total_athletes += (int)Country_Total_players($country);
-        $total_avg_winrate += Country_Win_rate($country);        
+        $total_avg_winrate += Country_Win_rate($country);
 
         // Increment counter and call the next result
         $counter++;
@@ -1222,18 +1216,14 @@ function Judoinside_profile($name = null)
     
     $name = explode(' ', $name);
     //print_r($name);
-    $ids = Load_Judoinside_data(); 
+    $ids = Load_Judoinside_data();
    
     //echo $name[0];
-    foreach($ids as $key => $value)
-    {
-    
-    
-        if(strtolower($name[0]) == strtolower($value[1]) && strtolower($name[1]) == strtolower($value[2])) {
+    foreach ($ids as $key => $value) {
+        if (strtolower($name[0]) == strtolower($value[1]) && strtolower($name[1]) == strtolower($value[2])) {
             return $value[3];
         }
-    }           
-
+    }
 }
 
 
@@ -1298,8 +1288,6 @@ function Get_Player_Rank_chart($name = 'SOBIROV Rishod')
                 $aPosition[] = 0;
             }
         }
-
-
     }
 
     $data_elements = implode(",", $aPosition);
@@ -1314,7 +1302,6 @@ function Get_Player_Rank_chart($name = 'SOBIROV Rishod')
     $chart_url .= $data_elements;                           // data, which is the players rank in each event on chart.
 
     return $chart_url;
-
 }
 
 
@@ -1354,9 +1341,6 @@ function Get_Country_Participation_chart($country = 'Brazil')
         } else {
             $aPosition[] = 0;
         }
-
-
-
     }
 
     $data_elements = implode(",", $aPosition);
@@ -1371,7 +1355,6 @@ function Get_Country_Participation_chart($country = 'Brazil')
     $chart_url .= $data_elements;                           // data, which is the players rank in each event on chart.
 
     return $chart_url;
-
 }
 
 
@@ -1409,9 +1392,6 @@ function Get_Country_Participation_Per_Event_chart($country = 'Brazil')
         } else {
             $aPosition[] = 0;
         }
-
-
-
     }
 
     $data_elements = implode(",", $aPosition);
@@ -1420,7 +1400,7 @@ function Get_Country_Participation_Per_Event_chart($country = 'Brazil')
     $chart_url = 'http://chart.apis.google.com/chart?';     // base url for google charts
     $chart_url .= 'chxr=0,0,60';                           // Labels
     $chart_url .= '&cht=bvg';                                 // ls - sparkline chart
-    $chart_url .= '&chbh=a';                               // chbh - bar width, a = auto 
+    $chart_url .= '&chbh=a';                               // chbh - bar width, a = auto
     $chart_url .= '&chs=600x120';                           // dimensions for the chart
     $chart_url .= '&chds=0,60';                        // max and min data limits for display
     $chart_url .= '&chxt=y';                           // CHart axis
@@ -1429,13 +1409,11 @@ function Get_Country_Participation_Per_Event_chart($country = 'Brazil')
     $chart_url .= $data_elements;                           // data, which is the players rank in each event on chart.
 
     return $chart_url;
-
 }
 
 
 function Country_Average_rank($country = null)
 {
-    
     if (!$country) {
         $country = params('country');
     }
@@ -1465,15 +1443,13 @@ function Country_Average_rank($country = null)
         $aRanks[] = $row['rank'];
     
         //$result->next();
-    
     }
 
-        return array_sum($aRanks)/count($aRanks);
+    return array_sum($aRanks)/count($aRanks);
 }
 
 function Country_Win_rate($country = null)
 {
-    
     if (!$country) {
         $country = params('country');
     }
@@ -1502,16 +1478,14 @@ function Country_Win_rate($country = null)
         $aRates[] = $row['wins'] / ($row['wins'] + $row['losses']);
     
         //$result->next();
-    
     }
 
-        $winrate = number_format(array_sum($aRates)/count($aRates), 3);
-        return $winrate;
+    $winrate = number_format(array_sum($aRates)/count($aRates), 3);
+    return $winrate;
 }
 
 function Country_Total_rank($country = null)
 {
-    
     if (!$country) {
         $country = params('country');
     }
@@ -1541,15 +1515,13 @@ function Country_Total_rank($country = null)
         $aRanks[] = $row['rank'];
     
         //$result->next();
-    
     }
 
-        return array_sum($aRanks);
+    return array_sum($aRanks);
 }
 
 function Country_Total_players($country = null)
 {
-    
     if (!$country) {
         $country = params('country');
     }
@@ -1579,17 +1551,14 @@ function Country_Total_players($country = null)
         $aRanks[] = $row['rank'];
     
         //$result->next();
-    
     }
 
-        return count($aRanks);
-        
+    return count($aRanks);
 }
 
 
 function Process_draw($player1, $player2)
 {
-
     $sWinner = null;
     //echo $player1,$player2;
     // This routine is called from process_row if scores are tied.
@@ -1625,7 +1594,6 @@ function Process_draw($player1, $player2)
 
 function Parse_by_images_in_html()
 {
-
     $aResults = null;
     $dirty_html = file_get_contents('data/temp.txt');
     //$purifier = new HTMLPurifier();
@@ -1644,8 +1612,6 @@ function Parse_by_images_in_html()
     $sWinner = null;
     //echo "number of fights: $total_fights<br>";
     for ($i=1; $i <= $total_fights; $i++) {
-
-
         $data3 = explode("IWYKPIWYKP", $aFights[$i]);
 
 
@@ -1672,22 +1638,18 @@ function Parse_by_images_in_html()
 
 
         if (strpos($aFights[$i], 'daumen-hoch.gif')) {
-
             $result = $player1.','.$player2;
             $aResults[$i] = $result;
 
-            //echo "$i: $player1 wins<br>";
+        //echo "$i: $player1 wins<br>";
             //$sWinner = $player1;
         } else {
-
             $result = $player2.','.$player1;
             $aResults[$i] = $result;
 
             //echo "$i: $player2 wins<br>";
             //$sWinner = $player2;
-
         }
-
     }
     return $aResults;
 }
@@ -1703,14 +1665,12 @@ function Maintenance_mode($mode = null)
         rename("not_index.html", "index.html");
         //echo 'Maintenance Mode enabled';
         return 'Maintenance Mode enabled';
-
     }
     if ($mode === 'disable') {
-        rename("index.html", "not_index.html");        
+        rename("index.html", "not_index.html");
         //echo 'Maintenance Mode disabled';
         return 'Maintenance Mode disabled';
     }
-
 }
 
 function Import_Oju_2011()
@@ -1788,13 +1748,8 @@ function Import_Oju_2011()
             //print_r($results);
             echo '<p>'.$player1.' '.$p1_rank.' - '.$results['R3'].'</p>';
             echo '<p>'.$player2.' '.$p2_rank.' - '.$results['R4'].'</p>';
-           
-            
-            
-
-                        
         }
-        fclose($handle);    
+        fclose($handle);
     }
 }
 
@@ -1804,10 +1759,9 @@ function Last_fight_number($event = null)
     // Used to identify where events start and finish.
 
     if (!$event) {
-        $db = dirname(__FILE__).'/../data/rwjl.db';    
+        $db = dirname(__FILE__).'/../data/rwjl.db';
     } else {
         $db = $event;
-
     }
 
     $dbo = new SQLite3("$db");
@@ -1819,13 +1773,11 @@ function Last_fight_number($event = null)
     );
 
     $row = $result->fetchArray();
-        return $row['Highest ID'];
-
+    return $row['Highest ID'];
 }
 
 function Last_fight_number_all()
 {
-
     $aPosition = array();
     $dir = new DirectoryIterator(dirname(__FILE__).'/../data');
     $dirnames = array();
@@ -1843,13 +1795,10 @@ function Last_fight_number_all()
         $event = 'data/'.$db_name;
         $temp_number = Last_fight_number($event);
         echo $db_name.': '.$temp_number.'<br />';
-        
-
-
     }
 }
 
-function Export_fights($start='12488',$finish='12806')
+function Export_fights($start='12488', $finish='12806')
 {
     // This function exports the fight results in the format Hans Van Hessen wanted.
     // Feed it the start fight number and the end fight number and get all the matches
@@ -1858,12 +1807,10 @@ function Export_fights($start='12488',$finish='12806')
 
     if (params('start')) {
         $start = params('start');
-    
     }
 
     if (params('finish')) {
         $finish = params('finish');
-    
     }
 
 
@@ -1880,7 +1827,7 @@ function Export_fights($start='12488',$finish='12806')
     5. First name
     6. Nation (or abbrevation)
     7. winner (1 or 2)
-    8. not played (in case of an injury) 
+    8. not played (in case of an injury)
     */
 
     echo '"Date","Event","Round","category","Surname1","FirstName1","Nation1","Surname2","Firstname2","Nation2","P1Score","P2Score","Winner"';
@@ -1935,7 +1882,7 @@ function Export_fights($start='12488',$finish='12806')
         // currently we do not have
         $p2_nation = Get_data($row['p2_name'], 'country');
         
-        echo $p2_nation.'","';        
+        echo $p2_nation.'","';
         
         echo $row['p1_score'];
         echo '","';
@@ -1947,7 +1894,6 @@ function Export_fights($start='12488',$finish='12806')
             echo '"1"';
         } else {
             echo '"2"';
-        
         }
         
         
@@ -1961,12 +1907,10 @@ function Export_fights($start='12488',$finish='12806')
         
         //$result->next();
     }
-
-
 }
 
 
-function Export_Fights_ji($start='12488',$finish='12806')
+function Export_Fights_ji($start='12488', $finish='12806')
 {
     // This function exports the fight results in the format Hans Van Hessen wants.
     // Feed it the start fight number and the end fight number and get all the matches
@@ -1974,12 +1918,10 @@ function Export_Fights_ji($start='12488',$finish='12806')
 
     if (params('start')) {
         $start = params('start');
-    
     }
 
     if (params('finish')) {
         $finish = params('finish');
-    
     }
 
 
@@ -1996,7 +1938,7 @@ function Export_Fights_ji($start='12488',$finish='12806')
     5. First name
     6. Nation (or abbrevation)
     7. winner (1 or 2)
-    8. not played (in case of an injury) 
+    8. not played (in case of an injury)
     */
 
     echo "\tDate,\tEvent,\tRound,\tcategory,\tSurname1,\tFirstName1,\tNation1,\tSurname2,\tFirstname2,\tNation2,\tWinner";
@@ -2016,27 +1958,26 @@ function Export_Fights_ji($start='12488',$finish='12806')
         // Round in competition
         $round = $row['round'];
         
-        switch ($round)
-        {
+        switch ($round) {
         case 'Final':
             $round = '14';
-            break;  
+            break;
                 
         case 'Semifinal':
             $round = '13';
-            break;    
+            break;
                              
         case 'Semifinal':
             $round = '13';
-            break;    
+            break;
                                              
         case 'Repechage':
             $round = '19';
-            break;   
+            break;
                                                              
         case 'Fight for 3rd place':
             $round = '21';
-            break;    
+            break;
         
         }
         
@@ -2052,7 +1993,7 @@ function Export_Fights_ji($start='12488',$finish='12806')
         }
         if ($cat == '+78') {
             $cat = '79';
-        }        
+        }
         echo $cat;
         echo ",\t";
         
@@ -2085,7 +2026,7 @@ function Export_Fights_ji($start='12488',$finish='12806')
         $p2_nation = Get_data($row['p2_name'], 'country');
         
         echo $p2_nation;
-        echo ",\t";        
+        echo ",\t";
         
         
         // Winner.
@@ -2093,7 +2034,6 @@ function Export_Fights_ji($start='12488',$finish='12806')
             echo '1';
         } else {
             echo '2';
-        
         }
         
         
@@ -2107,13 +2047,11 @@ function Export_Fights_ji($start='12488',$finish='12806')
         
         $result->next();
     }
-
-
 }
 
 
 
-function List_all_events() 
+function List_all_events()
 {
     // create html variable with header
     
@@ -2130,9 +2068,9 @@ function List_all_events()
         // fetch current row
         //        $row = $result->current();
        
-           print_r($row);
-           echo Get_event_date($row['shortcut']);
-           echo '<br />';
+        print_r($row);
+        echo Get_event_date($row['shortcut']);
+        echo '<br />';
            
        
         //        $result->next();
@@ -2141,7 +2079,7 @@ function List_all_events()
 
 function Get_event_date()
 {
-    //Take the shortcut and determine the url, then pull the 
+    //Take the shortcut and determine the url, then pull the
     //right page and grab the date.
     // shortcut comes from GET_ALL
 
@@ -2154,8 +2092,6 @@ function Get_event_date()
     //echo "...$date...";
         
     return($date);
-
-
 }
 
 function Athletes_In_category($category = null)
@@ -2167,7 +2103,6 @@ function Athletes_In_category($category = null)
     $results = $dbo->query($query) or die("Error in query");
     $athletes = $results->fetchArray();
     return $athletes[0];
-
 }
 
 /**
@@ -2182,5 +2117,3 @@ function API_page()
 {
     return html('api_page.html.php');
 }
-
-?>

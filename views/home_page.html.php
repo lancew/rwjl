@@ -1,4 +1,4 @@
-<h3>January 2019: This site was created in 2010, and is currently broken as software version incompatibilities. Please be patient and contact me if you happen to know a little about fixing PHP 5 sites to work on PHP 7 :-) , Lance</h3>
+<h3>March 2019: This site was created in 2010, and is not currently maintained. I am keeping it only for the Judo Community after revising the code in January 2019 to work again after PHP and Database upgrades broke the site. Please do contact me about this site and the ideas it explores  , Lance</h3>
 <p>This site is part of a research project into the ranking system used in JUDO and possible alternative methodologies.</p>
 <p>Currently, this site is using a modified version of the ELO ranking system. Using the following modifications:</p>
 <ul>
