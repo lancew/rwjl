@@ -110,6 +110,7 @@ function remove_magic_quotes($array)
   return $array;
 }
 
+/*
 if (get_magic_quotes_gpc())
 {
   $_GET    = remove_magic_quotes($_GET);
@@ -119,6 +120,7 @@ if (get_magic_quotes_gpc())
 }
 
 if(get_magic_quotes_runtime()) set_magic_quotes_runtime(false);
+*/
 
 # C. Disable error display
 #    by default, no error reporting; it will be switched on later in run().
@@ -1162,7 +1164,7 @@ function route_build($method, $path_or_array, $func)
 
   if($path[0] == "^")
   {
-    if($path{strlen($path) - 1} != "$") $path .= "$";
+    if($path[strlen($path) - 1] != "$") $path .= "$";
      $pattern = "#".$path."#i";
   }
   else if(empty($path) || $path == "/")
