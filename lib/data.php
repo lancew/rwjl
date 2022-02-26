@@ -784,7 +784,7 @@ function split_full_name($full_name) {
     $unfiltered_name_parts = explode(" ",$full_name);
     // completely ignore any words in parentheses
     foreach ($unfiltered_name_parts as $word) {
-        if ($word{0} != "(")
+        if ($word[0] != "(")
             $name_parts[] = $word;
     }
     $num_words = sizeof($name_parts);
@@ -890,7 +890,7 @@ function is_compound_lname($word) {
 
 // single letter, possibly followed by a period
 function is_initial($word) {
-    return ((strlen($word) == 1) || (strlen($word) == 2 && $word{1} == "."));
+    return ((strlen($word) == 1) || (strlen($word) == 2 && $word[1] == "."));
 }
 
 // detect mixed case words like "McDonald"
