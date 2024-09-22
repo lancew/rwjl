@@ -1135,7 +1135,7 @@ function Fights_for_player($player = null) {
 
 
 	//print_r($aPosition);
-	$chart_url = 'http://chart.apis.google.com/chart?';     // base url for google charts
+	$chart_url = 'https://quickchart.io/chart?';     // base url for google charts
 	$chart_url .= 'cht=lc';                                 // ls - sparkline chart
 	$chart_url .= '&chs=400x125';                           // dimensions for the chart
 	$chart_url .= '&chds=30,-30';                        // max and min data limits for display
@@ -1298,7 +1298,7 @@ function Get_Player_Rank_chart($name = 'SOBIROV Rishod') {
 	$data_elements = implode(",", $aPosition);
 
 	//print_r($aPosition);
-	$chart_url = 'http://chart.apis.google.com/chart?';     // base url for google charts
+	$chart_url = 'https://quickchart.io/chart?';     // base url for google charts
 	$chart_url .= 'cht=lc';                                 // ls - sparkline chart
 	$chart_url .= '&chs=400x125';                           // dimensions for the chart
 	$chart_url .= '&chds=1200,1900';                        // max and min data limits for display
@@ -1355,7 +1355,7 @@ function Get_Country_Participation_chart($country = 'Brazil') {
 	$data_elements = implode(",", $aPosition);
 
 	//print_r($aPosition);
-	$chart_url = 'http://chart.apis.google.com/chart?';     // base url for google charts
+	$chart_url = 'https://quickchart.io/chart?';     // base url for google charts
 	$chart_url .= 'cht=lc';                                 // ls - sparkline chart
 	$chart_url .= '&chs=400x120';                           // dimensions for the chart
 	$chart_url .= '&chds=0,200';                        // max and min data limits for display
@@ -1410,7 +1410,7 @@ function Get_Country_Participation_Per_Event_chart($country = 'Brazil') {
 	$data_elements = implode(",", $aPosition);
 
 	//print_r($aPosition);
-	$chart_url = 'http://chart.apis.google.com/chart?';     // base url for google charts
+	$chart_url = 'https://quickchart.io/chart?';     // base url for google charts
 	$chart_url .= 'chxr=0,0,60';                           // Labels
 	$chart_url .= '&cht=bvg';                                 // ls - sparkline chart
 	$chart_url .= '&chbh=a';                               // chbh - bar width, a = auto
