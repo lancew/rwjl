@@ -16,7 +16,7 @@
 
 
 //require_once('lib/smartcache/smart_cache.php');
-require_once 'lib/limonade.php';
+require_once 'vendor/sofadesign/limonade/lib/limonade.php';
 require_once 'lib/mc-elo-calculator.php';
 //$GLOBALS['smart_cache']['ttl']=30000;
 //ini_set('memory_limit', '-1');

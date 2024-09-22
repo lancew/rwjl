@@ -1,6 +1,7 @@
 {
     "name": "lancew/rwjl",
     "require-dev": {
+        "sofadesign/limonade": "dev-master",
         "squizlabs/php_codesniffer": "^3.4",
         "cmrcx/phptidy": "^3.1",
         "simpletest/simpletest": "^1.1.7"
