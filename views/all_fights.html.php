@@ -34,7 +34,8 @@ while ($row = $result->fetchArray()) {
     $html .= '</td>';
     // Blue players name
     $html .= '<td>';
-    $html .= '<a href="/player/'.$row['p1_name'].'">';
+    $row['p1_name_for_url'] = str_replace(' ', '+', $row['p1_name']);
+    $html .= '<a href="/player/'.$row['p1_name_for_url'].'">';
     $html .= $row['p1_name'];
     $html .= '</a>';
     $html .= '</td>';
@@ -49,7 +50,8 @@ while ($row = $result->fetchArray()) {
     $html .= '</td>';
     // WHite players name
     $html .= '<td>';
-    $html .= '<a href="/player/'.$row['p2_name'].'">';
+    $row['p2_name_for_url'] = str_replace(' ', '+', $row['p2_name']);
+    $html .= '<a href="/player/'.$row['p2_name_for_url'].'">';
     $html .= $row['p2_name'];
     $html .= '</a>';
     $html .= '</td>';
