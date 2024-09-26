@@ -710,11 +710,14 @@ function Show_category($category = null)
         // fetch current row
         //$row = $result->current();
 
+        // Replace sapces in name with *
+        $row['name_for_url'] = str_replace(' ', '+', $row['name']);
+
         $html .= '<tr>';
         $html .= '<td>';
         $html .= $count;
         $html .= '</td><td>';
-        $html .= '<a href="/player/'.$row['name'].'">';
+        $html .= '<a href="/player/'.$row['name_for_url'].'">';
         $html .= $row['name'];
         $html .= '</a>';
         $html .=  '</td><td>';
@@ -820,11 +823,12 @@ function Show_country($country = null)
     while ($row = $result->fetchArray()) {
         // fetch current row
         //$row = $result->current();
+        $row['name_for_url'] = str_replace(' ', '+', $row['name']);
         $html .= '<tr>';
         $html .= '<td>';
         $html .= $count;
         $html .= '</td><td>';
-        $html .= '<a href="/player/'.$row['name'].'">';
+        $html .= '<a href="/player/'.$row['name_for_url'].'">';
         $html .= $row['name'];
         $html .= '</a>';
         $html .= '</td><td>';
@@ -897,6 +901,8 @@ function Full_list()
     while ($row = $result->fetchArray()) {
         // fetch current row
         //$row = $result->current();
+        $row['name_for_url'] = str_replace(' ', '+', $row['name']);
+
         $html .= '<tr>';
         $html .= '<td>';
         $html .= $count;
@@ -1096,7 +1102,8 @@ function Fights_for_player($player = null)
         $html .= '</td>';
 
         $html .= '<td>';
-        $html .= '<a href="/player/'.$row['p1_name'].'">';
+        $row['p1_name_for_url'] = str_replace(' ', '+', $row['p1_name']);
+        $html .= '<a href="/player/'.$row['p1_name_for_url'].'">';
         $html .= $row['p1_name'];
         $html .= '</a></td>';
 
@@ -1109,7 +1116,8 @@ function Fights_for_player($player = null)
         $html .= '</td>';
 
         $html .= '<td>';
-        $html .= '<a href="/player/'.$row['p2_name'].'">';
+        $row['p2_name_for_url'] = str_replace(' ', '+', $row['p2_name']);
+        $html .= '<a href="/player/'.$row['p2_name_for_url'].'">';
         $html .= $row['p2_name'];
         $html .= '</a></td>';
 
@@ -1182,6 +1190,11 @@ function Player_profile($name = null)
         $name = params('name');
     }
 
+    // Replace asterisks with spaces in the name
+    $name = str_replace('+', ' ', $name);
+
+
+    
     $rank = Get_rank($name);
 
     $category = Get_data($name, 'Category');
