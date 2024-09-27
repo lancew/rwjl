@@ -12,8 +12,8 @@
                 <td><a href="cat/-70">-70</a> ( <?php echo(Athletes_In_category($category = '-70')); ?> )</td></tr>
                 <tr><td><a href="cat/-100">-100</a> ( <?php echo(Athletes_In_category($category = '-100')); ?> )</td>
                 <td><a href="cat/-78">-78</a> ( <?php echo(Athletes_In_category($category = '-78')); ?> )</td></tr>
-                <tr><td><a href="cat/+100">+100</a> ( <?php echo(Athletes_In_category($category = '+100')); ?> )</td>
-                <td><a href="cat/+78">+78</a> ( <?php echo(Athletes_In_category($category = '+78')); ?> )</td></tr>
+                <tr><td><a href="cat/100">+100</a> ( <?php echo(Athletes_In_category($category = '100')); ?> )</td>
+                <td><a href="cat/78">+78</a> ( <?php echo(Athletes_In_category($category = '78')); ?> )</td></tr>
                 
             </table>
             

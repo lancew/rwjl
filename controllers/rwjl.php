@@ -988,6 +988,11 @@ function Show_all_countries()
         // fetch current row
         //$row = $result->current();
 
+        // skip if country is empty
+        if (empty($row['country'])) {
+            continue;
+        }
+
         $html .= '<tr>';
         $html .= '<td align="center">';
         $country =  $row['country'];
