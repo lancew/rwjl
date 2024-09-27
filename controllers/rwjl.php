@@ -1194,7 +1194,7 @@ function Player_profile($name = null)
     $name = str_replace('+', ' ', $name);
 
 
-    
+
     $rank = Get_rank($name);
 
     $category = Get_data($name, 'Category');
