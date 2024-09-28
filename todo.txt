@@ -1,4 +1,0 @@
-To do stuff:
-
-Now tracking this info in SD (try git sd browser )
-
